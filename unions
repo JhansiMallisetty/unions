@@ -1,0 +1,40 @@
+mysql> select * from Employee;
++--------+----------+--------+
+| emp_id | Emp_name | salary |
++--------+----------+--------+
+|    100 | jhansi  |  10000 |
+|    101 | madhavi |  12000 |
+|    102 | suji    |  13000 |
+|    103 | navya   |  14500 |
++--------+----------+--------+
+4 rows in set (0.00 sec)
+mysql> select Emp_name from Employee
+union
+select fname from userforms;
++----------+
+| Emp_name |
++----------+
+| jhansi   |
+| madhavi  |
+| suji     |
+| navya    |
+| ravi     |
+| navi     |
+| tanu     |
++----------+
+7 rows in set (0.03 sec)
+mysql> select salary from Employee 
+union
+select fname from userforms;
++--------+
+| salary |
++--------+
+| 10000  |
+| 12000  |
+| 13000  |
+| 14500  |
+| ravi   |
+| navi   |
+| tanu   |
++--------+
+7 rows in set (0.00 sec)
